@@ -1,7 +1,7 @@
 import { Link } from "raviger";
 import { Button } from "./ui/button";
 
-export default function PrescriptionPadButton(props: {
+export default function HelloButton(props: {
   className?: string;
   encounter: { id: string };
   patientId: string;
@@ -10,11 +10,7 @@ export default function PrescriptionPadButton(props: {
   return (
     <div className="prescription-pad-container">
       <Button className={props.className} variant={"default"}>
-        <Link
-          href={`/facility/${props.facilityId}/patient/${props.patientId}/encounter/${props.encounter.id}/prescription-pad`}
-        >
-          Prescription Pad
-        </Link>
+        <Link href={`/hello`}>Hello!</Link>
       </Button>
     </div>
   );

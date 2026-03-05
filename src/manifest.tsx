@@ -1,6 +1,6 @@
 import { lazy } from "react";
 import Page from "./components/Page";
-import PrescriptionPad from "./pages/PrescriptionPad";
+import Hello from "./pages/Hello";
 
 interface NavigationLink {
   url: string;
@@ -27,14 +27,13 @@ interface Manifest {
 }
 
 const manifest: Manifest = {
-  plugin: "care-prescription-pad",
+  plugin: "care-hello-fe",
   routes: {
-    "/facility/:facilityId/patient/:patientId/encounter/:encounterId/prescription-pad":
-      () => (
-        <Page>
-          <PrescriptionPad />
-        </Page>
-      ),
+    "/hello": () => (
+      <Page>
+        <Hello />
+      </Page>
+    ),
   },
   extends: [],
   components: {
