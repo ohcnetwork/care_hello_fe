@@ -36,13 +36,15 @@ Make sure you have CARE running locally. Then, follow these steps:
 ```
 {
   "url": "http://localhost:4173/assets/remoteEntry.js",
-  "name": "care_hello_fe"
+  "name": "care-hello-fe"
 }
 ```
 
 4. Save the configuration and reload CARE.
 
 5. Head over to a patient encounter page, and you should see a new "Hello!" button. Click on it to see the "Hello CARE!" page.
+
+Tip: while developing this plugin, you can open `http://localhost:4173` to view a local status page that includes these setup steps and quick links.
 
 # Updating configuration
 

@@ -8,7 +8,7 @@ import tailwindcss from "@tailwindcss/vite";
 export default defineConfig({
   plugins: [
     federation({
-      name: "care_nurse_assistant",
+      name: "care_hello",
       filename: "remoteEntry.js",
       exposes: {
         "./manifest": "./src/manifest.tsx",
@@ -28,7 +28,7 @@ export default defineConfig({
     rollupOptions: {
       external: [],
       input: {
-        main: "./src/main.tsx",
+        main: "./index.html",
       },
       output: {
         format: "esm",

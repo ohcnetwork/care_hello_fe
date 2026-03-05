@@ -27,7 +27,7 @@ interface Manifest {
 }
 
 const manifest: Manifest = {
-  plugin: "care-hello-fe",
+  plugin: "care_hello_fe",
   routes: {
     "/hello": () => (
       <Page>
