@@ -21,13 +21,13 @@
 }
 
 @layer utilities {
-  .prescription-pad-container { 
+  .care-hello-container { 
     @tailwind utilities;
   }
 }
 
 @layer base {
-  .prescription-pad-container button:not([disabled]), .prescription-pad-container [role="button"]:not([disabled]) {
+  .care-hello-container button:not([disabled]), .care-hello-container [role="button"]:not([disabled]) {
     cursor: pointer;
   }
 }

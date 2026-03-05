@@ -8,7 +8,7 @@ export default function HelloButton(props: {
   facilityId: string;
 }) {
   return (
-    <div className="prescription-pad-container">
+    <div className="care-hello-container">
       <Button className={props.className} variant={"default"}>
         <Link href={`/hello`}>Hello!</Link>
       </Button>

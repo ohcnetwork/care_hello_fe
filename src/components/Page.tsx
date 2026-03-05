@@ -16,7 +16,7 @@ function Providers(props: { children: React.ReactNode }) {
   }, [container, containerRef]);
 
   return (
-    <div className="prescription-pad-container" ref={container}>
+    <div className="care-hello-container" ref={container}>
       {props.children}
     </div>
   );
