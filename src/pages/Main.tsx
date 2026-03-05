@@ -2,8 +2,11 @@ import manifest from "@/manifest";
 import { Button } from "@/components/ui/button";
 
 export default function Main() {
+  const remoteEntryUrl = `${window.location.origin}/assets/remoteEntry.js`;
+  const careUrl = import.meta.env.VITE_CARE_URL || "http://localhost:4000";
+
   const appMeta = `{
-  "url": "http://localhost:4173/assets/remoteEntry.js",
+  "url": "${remoteEntryUrl}",
   "name": "${manifest.plugin}"
 }`;
 
@@ -38,12 +41,12 @@ export default function Main() {
             <li>
               Open CARE Admin at{" "}
               <a
-                href="http://localhost:4000/admin"
+                href={`${careUrl}/admin`}
                 target="_blank"
                 rel="noreferrer"
                 className="text-neutral-900 underline"
               >
-                http://localhost:4000/admin
+                {`${careUrl}/admin`}
               </a>
               .
             </li>
