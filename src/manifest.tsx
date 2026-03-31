@@ -1,6 +1,7 @@
 import { lazy } from "react";
 import Page from "./components/Page";
 import Hello from "./pages/Hello";
+import AppStore from "./pages/AppStore";
 
 interface NavigationLink {
   url: string;
@@ -34,11 +35,22 @@ const manifest: Manifest = {
         <Hello />
       </Page>
     ),
+    "/app-store": () => (
+      <Page>
+        <AppStore />
+      </Page>
+    ),
   },
   extends: [],
   components: {
     PatientInfoCardQuickActions: lazy(() => import("./components/Button")),
   },
+  navItems: [
+    {
+      url: "/app-store",
+      name: "App Store",
+    },
+  ],
   userNavItems: [],
   adminNavItems: [],
 };

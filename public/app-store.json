@@ -1,0 +1,97 @@
+{
+  "featured": ["care-hello", "care-scribe"],
+  "categories": [
+    {
+      "id": "general",
+      "name": "General",
+      "description": "General purpose CARE apps"
+    },
+    {
+      "id": "clinical",
+      "name": "Clinical",
+      "description": "Apps for clinical workflows"
+    },
+    {
+      "id": "telehealth",
+      "name": "Telehealth",
+      "description": "Apps for remote patient care"
+    },
+    {
+      "id": "diagnostics",
+      "name": "Diagnostics",
+      "description": "Apps for diagnostics and reporting"
+    }
+  ],
+  "apps": [
+    {
+      "id": "care-hello",
+      "name": "Hello CARE",
+      "description": "A simple hello world CARE App boilerplate to get you started with CARE App development.",
+      "category": "general",
+      "developer": {
+        "name": "Open Healthcare Network",
+        "github": "ohcnetwork",
+        "url": "https://ohcnetwork.org"
+      },
+      "github": "https://github.com/ohcnetwork/care_hello_fe",
+      "version": "0.1.0",
+      "tags": ["boilerplate", "hello-world"]
+    },
+    {
+      "id": "care-scribe",
+      "name": "Care Scribe",
+      "description": "AI-powered clinical documentation assistant that transcribes and structures patient encounters in real time.",
+      "category": "clinical",
+      "developer": {
+        "name": "Open Healthcare Network",
+        "github": "ohcnetwork",
+        "url": "https://ohcnetwork.org"
+      },
+      "github": "https://github.com/ohcnetwork/care_scribe_fe",
+      "version": "1.2.0",
+      "tags": ["ai", "documentation", "clinical"]
+    },
+    {
+      "id": "care-telehealth",
+      "name": "Care Telehealth",
+      "description": "Integrated video consultation and remote monitoring for patients and providers.",
+      "category": "telehealth",
+      "developer": {
+        "name": "Open Healthcare Network",
+        "github": "ohcnetwork",
+        "url": "https://ohcnetwork.org"
+      },
+      "github": "https://github.com/ohcnetwork/care_telehealth_fe",
+      "version": "0.8.0",
+      "tags": ["video", "remote", "consultation"]
+    },
+    {
+      "id": "care-livekit",
+      "name": "Care LiveKit",
+      "description": "Real-time audio and video communication for CARE using LiveKit infrastructure.",
+      "category": "telehealth",
+      "developer": {
+        "name": "Open Healthcare Network",
+        "github": "ohcnetwork",
+        "url": "https://ohcnetwork.org"
+      },
+      "github": "https://github.com/ohcnetwork/care_livekit_fe",
+      "version": "0.5.0",
+      "tags": ["livekit", "video", "audio"]
+    },
+    {
+      "id": "care-lab",
+      "name": "Care Lab",
+      "description": "Laboratory information management integration for ordering and tracking diagnostic tests.",
+      "category": "diagnostics",
+      "developer": {
+        "name": "Open Healthcare Network",
+        "github": "ohcnetwork",
+        "url": "https://ohcnetwork.org"
+      },
+      "github": "https://github.com/ohcnetwork/care_lab_fe",
+      "version": "0.3.0",
+      "tags": ["lab", "diagnostics", "orders"]
+    }
+  ]
+}

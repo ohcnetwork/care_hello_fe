@@ -33,6 +33,21 @@ export default function Main() {
           </Button>
         </div>
 
+        {Object.keys(manifest.routes).length > 0 && (
+          <section className="mt-6">
+            <h2 className="text-sm font-semibold text-neutral-900">
+              Plugin Routes
+            </h2>
+            <div className="mt-2 flex flex-wrap gap-2">
+              {Object.keys(manifest.routes).map((route) => (
+                <Button key={route} asChild size="sm" variant="secondary">
+                  <a href={route}>{route}</a>
+                </Button>
+              ))}
+            </div>
+          </section>
+        )}
+
         <section className="mt-8 rounded-md border border-neutral-200 bg-neutral-50 p-4">
           <h2 className="text-base font-semibold text-neutral-900">
             Enable this app in CARE
