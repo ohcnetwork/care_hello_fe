@@ -24,6 +24,16 @@ export default tseslint.config(
         { allowConstantExport: true },
       ],
       "@typescript-eslint/no-explicit-any": "off",
+      // Honor the `_`-prefix convention (mirrors care_fe host config); e.g. the
+      // `infer _Start` in ExtractRouteParams in src/lib/requests.ts.
+      "@typescript-eslint/no-unused-vars": [
+        "error",
+        {
+          argsIgnorePattern: "^_",
+          varsIgnorePattern: "^_",
+          caughtErrorsIgnorePattern: "^_",
+        },
+      ],
     },
   },
 );
