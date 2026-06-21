@@ -22,7 +22,7 @@ before writing any code:
   `./manifest` via federation (building `remoteEntry.js`). The host loads it, unwraps the
   ES **default export**, and **duck-types** it as `PluginManifest`. There is no
   compile-time validation across the boundary — getting the shape wrong fails silently at
-  runtime, which is why §2 (source of truth) and the verify-step matter.
+  runtime, which is why the "Source of truth" section and the verify-step matter.
 - **Host services are reached through `window` globals — never imports.** The host sets
   `window.CARE_API_URL`, `window.AuthUserContext`, `window.__CORE_ENV__`, and
   `window.__CARE_PLUGIN_RUNTIME__.meta` in `care_fe/src/index.tsx`. Read auth with
@@ -72,7 +72,7 @@ new slot or extension point, copy its exact prop type from `care_fe/src/pluginTy
    Every `components`/`encounterTabs` entry must be `React.lazy(() => import(...))`.
 6. **Develop in-tree** by copying the plugin into `care_fe/apps/<slug>/` (a **real**
    directory — symlinks are not discovered) and running the host's `npm run dev` for HMR.
-7. **Run the verify-step** (§4).
+7. **Run the verify-step** (see the "Verify-step" section).
 8. **Build** the standalone remote: `npm run build` → `dist/assets/remoteEntry.js`.
 9. **Enable** via `REACT_ENABLED_APPS` and/or the backend `plug_config` API
    (`references/integration-and-deploy.md`).
@@ -98,9 +98,9 @@ new slot or extension point, copy its exact prop type from `care_fe/src/pluginTy
 These fail quietly — no thrown error reaches the user. Check them when a plugin "does
 nothing":
 
-- **Invalid / non-URL `meta.url` → the plugin is skipped** (console error only, app keeps
+- **Invalid / non-URL `meta.url` -> the plugin is skipped** (console error only, app keeps
   running).
-- **401/403 from `GET /api/v1/plug_config/` is swallowed silently → no API plugins load**
+- **401/403 from `GET /api/v1/plug_config/` is swallowed silently -> no API plugins load**
   (build-time plugins still load).
 - **Manifests/overrides only apply after the config fetch finishes** (`isLoading: false`).
 - **Overrides only work on components wrapped with `register()`** (host

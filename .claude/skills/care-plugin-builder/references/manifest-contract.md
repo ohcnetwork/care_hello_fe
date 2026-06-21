@@ -1,10 +1,11 @@
 # Manifest contract
 
-> **Snapshot — verify against the host.** The authoritative source is
-> `/Users/bodhishthomas/code/care_fe/src/pluginTypes.ts`. This file is a point-in-time
-> copy for quick reference. If anything here disagrees with `pluginTypes.ts`, the host file
-> wins. When you use a slot or extension point, re-read its exact type in `pluginTypes.ts`
-> and mirror it into this plugin's `src/types/pluginManifest.ts`.
+> **Snapshot — verify against the host.** The authoritative source is the host checkout's
+> `care_fe/src/pluginTypes.ts` (the `care_fe` repo cloned alongside this plugin). This file
+> is a point-in-time copy for quick reference. If anything here disagrees with
+> `pluginTypes.ts`, the host file wins. When you use a slot or extension point, re-read its
+> exact type in `pluginTypes.ts` and mirror it into this plugin's
+> `src/types/pluginManifest.ts`.
 
 ## `PluginManifest`
 
