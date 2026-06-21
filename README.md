@@ -234,6 +234,9 @@ To add a route, a component slot, nav items, or an authenticated API call:
 5. Develop in-tree under `care_fe/apps/care_hello_fe/` for HMR, then verify with
    `npx tsc -b && npm run build` before shipping the `remoteEntry.js`.
 
-> A `care-plugin-builder` Claude Code skill — encoding this workflow with copy-paste recipes
-> and pointers into the host's `pluginTypes.ts` and `care-apps-*` docs — is in progress and is
-> not yet bundled in this repository.
+> This repository bundles a `care-plugin-builder` Claude Code skill that encodes this workflow
+> with copy-paste recipes and pointers into the host's `pluginTypes.ts` and `care-apps-*` docs.
+> It lives at [`.claude/skills/care-plugin-builder/`](./.claude/skills/care-plugin-builder/):
+> [`SKILL.md`](./.claude/skills/care-plugin-builder/SKILL.md) plus five references under
+> [`references/`](./.claude/skills/care-plugin-builder/references/) (manifest contract, recipes,
+> data & auth, integration & deploy, advanced extension points).
