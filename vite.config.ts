@@ -8,31 +8,27 @@ import tailwindcss from "@tailwindcss/vite";
 export default defineConfig({
   plugins: [
     federation({
-      name: "care_hello",
+      name: "care_hello_fe", // must equal the plugin slug
       filename: "remoteEntry.js",
       exposes: {
         "./manifest": "./src/manifest.tsx",
       },
-      shared: ["react", "react-dom", "react-i18next"],
+      // Share every host singleton the plugin consumes, or React/router/query context
+      // breaks at runtime with "Should have a queue" hook-order errors.
+      shared: ["react", "react-dom", "react-i18next", "@tanstack/react-query", "raviger"],
     }),
     tailwindcss(),
     react(),
   ],
   build: {
-    target: "esnext",
+    target: "es2022",
     minify: true,
     cssCodeSplit: false,
-    modulePreload: {
-      polyfill: false,
-    },
+    modulePreload: { polyfill: false },
     rollupOptions: {
       external: [],
-      input: {
-        main: "./index.html",
-      },
-      output: {
-        format: "esm",
-      },
+      input: { main: "./index.html" },
+      output: { format: "esm" },
     },
   },
   resolve: {
