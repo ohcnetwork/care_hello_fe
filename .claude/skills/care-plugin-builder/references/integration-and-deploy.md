@@ -3,6 +3,9 @@
 How a plugin gets loaded into the host — during development (in-tree) and in production
 (standalone remote). Plus the one footgun that breaks everything: shared-dependency parity.
 
+> Host doc: `care_fe/docs/care-apps-local-dev.md` is the authoritative host-side writeup of
+> local dev and `clone-component`. Read it alongside this file.
+
 ## 1. In-tree dev (recommended for development)
 
 The host's Vite config (`care_fe/vite.config.mts`) ships a `localPluginDevSupport()` plugin
