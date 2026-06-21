@@ -28,7 +28,6 @@ export interface NavigationLink {
 }
 
 /** raviger-style route map. Canonical: care_fe → src/Routers/AppRouter.tsx (`AppRoutes`). */
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export type AppRoutes = Record<string, (params: any) => ReactNode>;
 
 /**
@@ -41,7 +40,6 @@ export type PatientInfoCardQuickActionsComponentType = FC<{
   className?: string;
 }>;
 
-// eslint-disable-next-line @typescript-eslint/no-explicit-any
 type LazyComponent<T extends FC<any>> = LazyExoticComponent<T>;
 
 /** Subset of care_fe `SupportedPluginComponents` this plugin uses. */
